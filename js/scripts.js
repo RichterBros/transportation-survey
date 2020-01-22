@@ -6,10 +6,13 @@ $(document).ready(function(){
       $("input:checkbox[name=work-transportation]:checked").each(function(){
         var workTransportationMode = $(this).val();
         $('#work-responses').append(workTransportationMode + "<br>");
-        console.log(workTransportationMode);
-    });
-    
-    $("#formHide").toggle();
-      
+      });
+      $("#fun-responses").empty();
+      $("#fun-responses").toggle();
+      $("input:checkbox[name=fun-transportation]:checked").each(function(){
+        var funTransportationMode = $(this).val();
+        $('#fun-responses').append(funTransportationMode + "<br>");
+      });
+      $('#work-boxes, #fun-boxes').toggle();
     });
   });
